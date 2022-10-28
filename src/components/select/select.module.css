@@ -26,10 +26,28 @@
   align-self: stretch;
 }
 
+.caret-btn {
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.caret-btn:focus,
+.caret-btn:hover {
+  outline: none;
+}
+
 .caret {
-  border: 0.25em solid transparent;
+  border: 0.5em solid transparent;
   border-top-color: white;
   translate: 0 25%;
+  transition: transform 250ms ease;
+}
+
+.caret.open {
+  transform: rotate(90deg);
+  transform-origin: center center;
+  translate: -25% 0;
 }
 
 .clear-button {
@@ -37,7 +55,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1.25em;
+  font-size: 1.5em;
   padding: 0;
 }
 
